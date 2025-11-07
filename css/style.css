@@ -155,5 +155,42 @@ body{
   font-size: 1.08rem;
   line-height: 1.55;
 }
+/* ============================= */
+/* ESTILO MODERNO + ANIMAÇÕES    */
+/* ============================= */
+
+/* Efeito suave em tudo que for imagem */
+img, .card, .grid-depoimentos img {
+  transition: all 0.35s ease;
+}
+
+/* Zoom suave nas imagens de serviços */
+.card:hover img {
+  transform: scale(1.06);
+}
+
+/* Sombra mais forte ao passar o mouse */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+}
+
+/* Depoimentos: zoom suave */
+.grid-depoimentos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Animação de entrada (fade + subir) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
