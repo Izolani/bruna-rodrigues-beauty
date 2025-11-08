@@ -18,7 +18,8 @@ body{
 /* HEADER */
 .site-header{background:white;border-bottom:1px solid #eee;position:sticky;top:0;z-index:20;}
 .header-inner{display:flex;justify-content:space-between;align-items:center;padding:14px 0;}
-.logo{height:60px;}
+.logo{height:75px;width:auto;
+  object-fit:contain;}
 .main-nav a{
   margin-left:18px;
   text-decoration:none;
