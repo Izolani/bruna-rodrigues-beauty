@@ -16,7 +16,6 @@ body{
 .container{width:min(1100px, 90%); margin:auto;}
 
 /* HEADER */
-/* HEADER */
 .site-header{
   background:white;
   border-bottom:1px solid #eee;
@@ -29,11 +28,11 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 0; /* mais espaço, visual mais elegante */
+  padding:18px 0;
 }
 
 .logo{
-  height:75px;    /* tamanho ajustado */
+  height:75px;
   width:auto;
   object-fit:contain;
 }
@@ -45,80 +44,161 @@ body{
   font-weight:600;
 }
 
-/* HERO */
+/* HERO (Opcional, se existir) */
 .hero{text-align:center;padding:55px 0;}
 .hero h1{color:var(--rosa);font-size:2.2rem;margin-bottom:12px;}
 .lead{
-  color:var(--rosa); /* <<— Texto agora fica rosa, como pedido */
+  color:var(--rosa);
   font-size:1.12rem;
   font-weight:500;
 }
 
+/* SOBRE */
+.sobre {
+  padding: 70px 0;
+}
+
+.sobre-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sobre-img img {
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.20);
+}
+
+.sobre-texto {
+  max-width: 520px;
+}
+
+.sobre-texto h2 {
+  color: var(--rosa);
+  font-size: 2.1rem;
+  margin-bottom: 14px;
+  font-weight: bold;
+}
+
+.sobre-texto p {
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
 /* SERVIÇOS */
-.servicos{text-align:center;padding:55px 0;}
-.servicos h2{color:var(--rosa);font-size:1.9rem;margin-bottom:30px;}
+.servicos{
+  text-align:center;
+  padding:70px 0;
+}
+.servicos h2{
+  color:var(--rosa);
+  font-size:2rem;
+  margin-bottom:40px;
+}
+
 .grid-servicos{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
-  gap:22px;
+  gap:26px;
 }
+
 .card{
   background:white;
   border-radius:12px;
-  padding-bottom:10px;
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-.card img {
-  width: 100%;
-  height: 260px; /* aumenta para ficar proporcional */
-  object-fit: cover;
-  border-radius: 14px 14px 0 0;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.20);
-}
-.card p{margin-top:10px;color:var(--rosa);font-weight:bold;}
-
-/* DEPOIMENTOS */
-.depoimentos{background:#ffe6f0;text-align:center;padding:55px 0;}
-.depoimentos h2{color:var(--rosa);font-size:1.9rem;margin-bottom:28px;}
-.grid-depoimentos{
-  display:grid;
-  gap:16px;
-  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-}
-.grid-depoimentos img{
-  width: 100%;
-  height: 260px; /* altura maior = visual mais bonito */
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.20);
+  padding-bottom:14px;
+  transition:transform .3s;
 }
 
-/* CONTATO */
-.contato{text-align:center;padding:55px 0;}
-.btn-whatsapp{
-  background:var(--rosa);
-  color:white;
-  padding:14px 28px;
-  border-radius:10px;
-  text-decoration:none;
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px 12px 0 0;
+}
+
+.card p{
+  margin-top:12px;
+  color:var(--rosa);
   font-weight:bold;
   font-size:1rem;
 }
 
-/* BOTÃO WHATSAPP FIXO (TAMANHO PEQUENO) */
+/* DEPOIMENTOS */
+.depoimentos{
+  background:#ffe6f0;
+  text-align:center;
+  padding:70px 0;
+}
+.depoimentos h2{
+  color:var(--rosa);
+  font-size:2rem;
+  margin-bottom:36px;
+}
+.grid-depoimentos{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
+}
+
+.grid-depoimentos img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* CONTATO */
+.contato{
+  text-align:center;
+  padding:70px 0;
+}
+
+.contato h2{
+  color:var(--rosa);
+  font-size:2rem;
+  margin-bottom:18px;
+}
+
+.btn-whatsapp{
+  background:var(--rosa);
+  color:white;
+  padding:18px 34px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.1rem;
+  display:inline-block;
+  transition:.3s;
+}
+
+.btn-whatsapp:hover{
+  filter:brightness(1.15);
+}
+
+/* BOTÃO WHATSAPP FLUTUANTE */
 .btn-whatsapp-fixed{
   position:fixed;
   bottom:24px;
   right:24px;
   background:var(--rosa);
   color:white;
-  padding:10px 18px;
+  padding:12px 20px;
   border-radius:40px;
   text-decoration:none;
   font-weight:bold;
   font-size:0.90rem;
   z-index:40;
-  box-shadow:0 4px 12px rgba(0,0,0,0.18);
+  box-shadow:0 4px 12px rgba(0,0,0,0.20);
 }
 
 /* FOOTER */
@@ -126,90 +206,17 @@ body{
   background:var(--rosa);
   color:white;
   text-align:center;
-  padding:18px 0;
-}
-/* AJUSTE DE ESPAÇAMENTO DA SEÇÃO CONTATO */
-.contato h2 {
-  margin-bottom: 28px; /* aumenta espaço abaixo do título */
+  padding:20px 0;
+  margin-top:40px;
 }
 
-.contato .btn-whatsapp {
-  display: inline-block;
-  margin-top: 18px; /* empurra o botão para baixo */
+/* ANIMAÇÃO REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .9s ease;
 }
-/* ============================= */
-/* SEÇÃO SOBRE (FOTO + TEXTO)   */
-/* ============================= */
-.sobre {
-  padding: 60px 0;
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
-
-.sobre-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.sobre-img img {
-  width: 320px;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-}
-
-.sobre-texto {
-  max-width: 500px;
-}
-
-.sobre-texto h2 {
-  color: var(--rosa);
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-.sobre-texto p {
-  font-size: 1.08rem;
-  line-height: 1.55;
-}
-/* ============================= */
-/* ESTILO MODERNO + ANIMAÇÕES    */
-/* ============================= */
-
-/* Efeito suave em tudo que for imagem */
-img, .card, .grid-depoimentos img {
-  transition: all 0.35s ease;
-}
-
-/* Zoom suave nas imagens de serviços */
-.card:hover img {
-  transform: scale(1.06);
-}
-
-/* Sombra mais forte ao passar o mouse */
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
-}
-
-/* Depoimentos: zoom suave */
-.grid-depoimentos img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-}
-
-/* Animação de entrada (fade + subir) */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
