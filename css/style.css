@@ -174,9 +174,13 @@ body{
 }
 /* === AJUSTE IMAGENS SOBRE === */
 .sobre-img img {
-  width: 280px;
+  width: 260px;
   height: auto;
   border-radius: 12px;
+  border: 3px solid var(--rosa);
+  box-shadow: 0 0 8px rgba(0,0,0,0.12);
+  padding: 2px; /* reduz a moldura interna */
+  margin-bottom: -10px; /* diminui espaço inferior */
 }
 
 /* === SERVIÇOS === */
@@ -227,11 +231,11 @@ img {
 /* === LAYOUT DA SEÇÃO SOBRE (FOTO + TEXTO LADO A LADO) === */
 .sobre-inner {
   display: flex;
-  align-items: center;
+  align-items: center; /* isto garante alinhamento vertical */
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
-  text-align: left; 
+  text-align: left;
 }
 
 /* Limita o tamanho do texto e organiza */
