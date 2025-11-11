@@ -179,41 +179,16 @@ body{
   border-radius: 12px;
   border: 3px solid var(--rosa);
   box-shadow: 0 0 8px rgba(0,0,0,0.12);
-  padding: 2px; /* reduz a moldura interna */
-  margin-bottom: -10px; /* diminui espaço inferior */
+  padding: 2px;
 }
 
-/* === SERVIÇOS === */
-.servicos .card img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+/* Ajuste da margem inferior para aproximar da seção */
+.sobre-img {
+  margin-bottom: -18px;
 }
 
-/* === DEPOIMENTOS === */
-.depoimentos img {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* === GARANTE QUE O LAYOUT NÃO ESTOURE === */
-img {
-  max-width: 100%;
-  height: auto;
-}
-.sobre-img img {
-  width: 260px;
-  height: auto;
-  border-radius: 12px;
-  border: 4px solid var(--rosa);
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
-  padding: 4px;
+.sobre {
+  padding-bottom: 20px;
 }
 /* === MAPA NO RODAPÉ === */
 .map-container {
@@ -231,20 +206,27 @@ img {
 /* === LAYOUT DA SEÇÃO SOBRE (FOTO + TEXTO LADO A LADO) === */
 .sobre-inner {
   display: flex;
-  align-items: center; /* isto garante alinhamento vertical */
+  align-items: flex-start; /* Alinha o topo da imagem com o topo do texto */
   justify-content: center;
-  gap: 30px;
+  gap: 18px;
   flex-wrap: wrap;
   text-align: left;
 }
 
-/* Limita o tamanho do texto e organiza */
+/* Ajuste da imagem (aproxima a imagem do texto) */
+.sobre-img {
+  margin-bottom: -18px;
+}
+
+/* Limita o espaço do texto */
 .sobre-texto {
   max-width: 480px;
 }
 
 /* Ajuste no título */
 .sobre-texto h2 {
+  margin-bottom: 12px;
+}
   margin-bottom: 12px;
 }
 
