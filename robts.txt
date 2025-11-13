@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bruna-rodrigues-beauty.vercel.app/sitemap.xml
